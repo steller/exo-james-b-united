@@ -1,0 +1,11 @@
+services:
+  database:
+    extends:
+      file: ../default-docker-compose.yml  # Référence au fichier parent
+      service: database
+    volumes:
+      - james_b_united_data_ex_1:/var/lib/postgresql/data
+      - ./init-sql:/docker-entrypoint-initdb.d
+
+volumes:
+  james_b_united_data_ex_1:

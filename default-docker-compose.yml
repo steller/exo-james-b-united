@@ -1,0 +1,13 @@
+services:
+  database:
+    image: postgres:16.1
+    container_name: exercises-james-b-united-database
+    environment:
+      POSTGRES_DB: exercises-b-united
+      POSTGRES_USER: james
+      POSTGRES_PASSWORD: vrouf-exercises
+      SCHEMA: public
+    ports:
+      - "5434:5432"
+    volumes:
+      - ./init-sql:/docker-entrypoint-initdb.d

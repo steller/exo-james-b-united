@@ -1,0 +1,17 @@
+### IntelliJ IDEA ###
+.idea
+*.iml
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
+
+# System Files
+.DS_Store
+Thumbs.db
