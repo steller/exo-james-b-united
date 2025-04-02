@@ -5,9 +5,6 @@ WITH cte_employes AS (
     GROUP BY employes.id
 )
 SELECT id, nom,
-       CASE
-           WHEN projets IS NULL THEN 'Aucun projet'
-           ELSE projets
-       END AS projets
+       COALESCE(projets, 'Aucun projet')
 FROM cte_employes
 ORDER BY id;
