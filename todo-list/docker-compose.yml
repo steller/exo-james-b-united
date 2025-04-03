@@ -1,0 +1,10 @@
+services:
+  database:
+    extends:
+      file: ../default-docker-compose.yml  # Référence au fichier parent
+      service: database
+    volumes:
+      - james_b_united_data_todo_list:/var/lib/postgresql/data
+
+volumes:
+  james_b_united_data_todo_list:
